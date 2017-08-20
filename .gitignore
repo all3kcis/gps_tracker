@@ -1,0 +1,9 @@
+/.idea/
+/tests/*
+/plugins/__pycache__/*
+/utils/__pycache__/*
+/logs/*.log*
+/db/*.sqlite3
+*.log
+config.ini
+test-start.py

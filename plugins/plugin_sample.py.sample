@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+
+# imports
+
+
+class plugin_name:
+
+	parent              = None
+
+	def __init__(self, parent):
+		self.parent = parent
+
+	def start(self):
+		pass
+
+	def stop(self):
+		pass
+	
+	def remove(self):
+		self.stop()
+		self.parent.log.info('Delete {}.'.format(self.getName()))
+
+	def getName(self):
+		return self.__class__.__name__
+
+	def __del__(self):
+		self.parent.log.debug('Deleting.')
